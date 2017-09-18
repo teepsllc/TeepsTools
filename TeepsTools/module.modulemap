@@ -1,0 +1,9 @@
+framework module TeepsTools {
+  module Jumping {
+    header "Jumping.h"
+  }
+  
+  module HexColor {
+    header "HexColor.h"
+  }
+}
