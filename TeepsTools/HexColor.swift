@@ -9,9 +9,9 @@
 import UIKit
 
 /** USAGE:
- UIColor(hex: 0xFFFFFF)
  UIColor("#FFFFFF")
  UIColor("FFFFFF")
+ UIColor("FFFFFF", alpha: 1)
  */
 public extension UIColor {
   public convenience init(_ hex: String, alpha: CGFloat = 1) {
