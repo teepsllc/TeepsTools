@@ -40,10 +40,10 @@ Adding a new tool is fairly simple.
 
 ```swift
 framework module TeepsTools {
-	// Add your new module here
-	module MyTool {
-		header "MyTool.h"
-	}
+  // Add your new module here
+  module MyTool {
+    header "MyTool.h"
+  }
 }
 ```
 
