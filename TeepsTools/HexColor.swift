@@ -14,28 +14,7 @@ import UIKit
  UIColor("FFFFFF")
  */
 public extension UIColor {
-  public convenience init(red: Int, green: Int, blue: Int) {
-    assert(red >= 0 && red <= 255, "Invalid red component")
-    assert(green >= 0 && green <= 255, "Invalid green component")
-    assert(blue >= 0 && blue <= 255, "Invalid blue component")
-    
-    self.init(
-      red: CGFloat(red) / 255,
-      green: CGFloat(green) / 255,
-      blue: CGFloat(blue) / 255,
-      alpha: 1
-    )
-  }
-  
-  public convenience init(hex: Int) {
-    self.init(
-      red: (hex >> 16) & 0xFF,
-      green: (hex >> 8) & 0xFF,
-      blue: hex & 0xFF
-    )
-  }
-  
-  public convenience init(_ hex: String) {
+  public convenience init(_ hex: String, alpha: CGFloat = 1) {
     var sanitzedHex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
     
     if sanitzedHex.hasPrefix("#") {
@@ -45,6 +24,11 @@ public extension UIColor {
     var rgbValue: UInt32 = 0
     Scanner(string: sanitzedHex).scanHexInt32(&rgbValue)
     
-    self.init(hex: Int(rgbValue))
+    self.init(
+      red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255,
+      green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255,
+      blue: CGFloat(rgbValue & 0x0000FF) / 255,
+      alpha: alpha
+    )
   }
 }
