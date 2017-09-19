@@ -12,6 +12,9 @@ An extension on UIColor to enable initialization with hex strings.
 ### [Alerting](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/Alerting.swift)
 A protocol that allows you to show simple alerts easily.
 
+### [ImagePicking](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/ImagePicking.swift)
+A protocol for showing an image picker.
+
 ## Carthage Installation
 To integrate TeepsTools into your Xcode project using Carthage, specify it in your `Cartfile`:
 
