@@ -9,6 +9,9 @@ A text field navigation protocol that allows you to easily configure keyboard na
 ### [HexColor](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/HexColor.swift)
 An extension on UIColor to enable initialization with hex strings.
 
+### [Alerting](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/Alerting.swift)
+A protocol that allows you to show simple alerts easily.
+
 ## Carthage Installation
 To integrate TeepsTools into your Xcode project using Carthage, specify it in your `Cartfile`:
 
@@ -46,4 +49,3 @@ framework module TeepsTools {
   }
 }
 ```
-
