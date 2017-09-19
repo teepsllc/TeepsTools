@@ -10,4 +10,8 @@ framework module TeepsTools {
   module Alerting {
     header "Alerting.h"
   }
+  
+  module ImagePicking {
+    header "ImagePicking.swift"
+  }
 }

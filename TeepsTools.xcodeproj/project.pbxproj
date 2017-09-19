@@ -11,6 +11,7 @@
 		6A36C4221F70329A009013E0 /* Jumping.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A36C4201F7031AD009013E0 /* Jumping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6A36C4241F7032B9009013E0 /* HexColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A36C4211F7031F5009013E0 /* HexColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0ED5AC01F719AB800893BB3 /* Alerting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED5ABF1F719AB800893BB3 /* Alerting.swift */; };
+		B0ED5AFF1F71A66000893BB3 /* ImagePicking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */; };
 		C9381C241F26610A00471C1A /* TeepsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9381C1A1F26610A00471C1A /* TeepsTools.framework */; };
 		C9381C291F26610A00471C1A /* TeepsToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9381C281F26610A00471C1A /* TeepsToolsTests.swift */; };
 		C9381C2B1F26610A00471C1A /* TeepsTools.h in Headers */ = {isa = PBXBuildFile; fileRef = C9381C1D1F26610A00471C1A /* TeepsTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,6 +35,8 @@
 		6A36C4211F7031F5009013E0 /* HexColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HexColor.h; sourceTree = "<group>"; };
 		B0ED5ABF1F719AB800893BB3 /* Alerting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerting.swift; sourceTree = "<group>"; };
 		B0ED5AC11F719D4000893BB3 /* Alerting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Alerting.h; sourceTree = "<group>"; };
+		B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicking.swift; sourceTree = "<group>"; };
+		B0ED5B001F71ACC900893BB3 /* ImagePicking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePicking.h; sourceTree = "<group>"; };
 		C9381C1A1F26610A00471C1A /* TeepsTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeepsTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9381C1D1F26610A00471C1A /* TeepsTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeepsTools.h; sourceTree = "<group>"; };
 		C9381C1E1F26610A00471C1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 				6A36C4201F7031AD009013E0 /* Jumping.h */,
 				6A36C4211F7031F5009013E0 /* HexColor.h */,
 				B0ED5AC11F719D4000893BB3 /* Alerting.h */,
+				B0ED5B001F71ACC900893BB3 /* ImagePicking.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -79,6 +83,7 @@
 				C9381C341F26612A00471C1A /* Jumping.swift */,
 				6A36C41C1F702B4C009013E0 /* HexColor.swift */,
 				B0ED5ABF1F719AB800893BB3 /* Alerting.swift */,
+				B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9381C351F26612A00471C1A /* Jumping.swift in Sources */,
+				B0ED5AFF1F71A66000893BB3 /* ImagePicking.swift in Sources */,
 				6A36C41D1F702B4C009013E0 /* HexColor.swift in Sources */,
 				B0ED5AC01F719AB800893BB3 /* Alerting.swift in Sources */,
 			);
