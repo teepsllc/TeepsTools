@@ -10,21 +10,23 @@
 import UIKit
 
 /** USAGE:
-showError(withTitle: "Oops!", description: "You must include your name")
+showAlert(withTitle: "Congratulations", description: "You're a winner")
+showError(error)
+showError(withDescription: "You must include you name")
  */
 protocol Alerting {
-  func showError(withTitle title: String, description: String)
+  func showAlert(withTitle title: String, description: String)
 }
 
 extension Alerting where Self: UIViewController {
-  func showError(withTitle title: String, description: String) {
+  func showAlert(withTitle title: String, description: String) {
     let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
     self.present(alert, animated: true, completion: nil)
   }
   
   /// Show an error with the default title
   func showError(withDescription description: String) {
-    showError(withTitle: "Sorry!", description: description)
+    showAlert(withTitle: "Sorry!", description: description)
   }
   
   /// Show an error displaying the reason it occurred
