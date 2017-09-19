@@ -12,7 +12,7 @@ import UIKit
 /** USAGE:
 showAlert(withTitle: "Congratulations", description: "You're a winner")
 showError(error)
-showError(withDescription: "You must include you name")
+showError(withDescription: "You must include your name")
  */
 protocol Alerting {
   func showAlert(withTitle title: String, description: String)
