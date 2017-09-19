@@ -9,11 +9,13 @@
 
 import UIKit
 
+/** USAGE:
+showError(withTitle: "Oops!", description: "You must include your name")
+ */
 protocol Alerting {
   func showError(withTitle title: String, description: String)
 }
 
-// MARK: - Errors
 extension Alerting where Self: UIViewController {
   func showError(withTitle title: String, description: String) {
     let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
