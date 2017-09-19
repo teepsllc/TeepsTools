@@ -12,6 +12,6 @@ framework module TeepsTools {
   }
   
   module ImagePicking {
-    header "ImagePicking.swift"
+    header "ImagePicking.h"
   }
 }
