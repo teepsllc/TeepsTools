@@ -14,7 +14,7 @@ import UIKit
  */
 
 /**  NOTE:
- Be sure to include image permission usage description or the application will crash when
+ Be sure to include NSPhotoLibraryUsageDescription or the application will crash when
  showImagePicker calls an action to use the camera or access the gallery
  */
 
