@@ -14,16 +14,16 @@ import UIKit
  */
 
 /**  NOTE:
- Be sure to include image permission usage description or the application will crash when
+ Be sure to include NSPhotoLibraryUsageDescription or the application will crash when
  showImagePicker calls an action to use the camera or access the gallery
  */
 
 /// Conformers can choose an image using UIImagePickerController
-protocol ImagePicking: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+public protocol ImagePicking: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func showImagePicker(withTitle title: String)
 }
 
-extension ImagePicking where Self: UIViewController {
+public extension ImagePicking where Self: UIViewController {
   
   func showImagePicker(withTitle title: String) {
     let alert = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)

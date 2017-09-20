@@ -14,11 +14,11 @@ showAlert(withTitle: "Congratulations", description: "You're a winner")
 showError(error)
 showError(withDescription: "You must include your name")
  */
-protocol Alerting {
+public protocol Alerting {
   func showAlert(withTitle title: String, description: String)
 }
 
-extension Alerting where Self: UIViewController {
+public extension Alerting where Self: UIViewController {
   func showAlert(withTitle title: String, description: String) {
     let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
     self.present(alert, animated: true, completion: nil)
