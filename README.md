@@ -15,6 +15,9 @@ A protocol that allows you to show simple alerts easily.
 ### [ImagePicking](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/ImagePicking.swift)
 A protocol for showing an image picker.
 
+### [InputField](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/InputField.swift)
+A custom TextField that validates input against a pre-defined regex or custom.
+
 ## Carthage Installation
 To integrate TeepsTools into your Xcode project using Carthage, specify it in your `Cartfile`:
 
