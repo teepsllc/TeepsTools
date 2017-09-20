@@ -19,11 +19,11 @@ import UIKit
  */
 
 /// Conformers can choose an image using UIImagePickerController
-protocol ImagePicking: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+public protocol ImagePicking: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   func showImagePicker(withTitle title: String)
 }
 
-extension ImagePicking where Self: UIViewController {
+public extension ImagePicking where Self: UIViewController {
   
   func showImagePicker(withTitle title: String) {
     let alert = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)

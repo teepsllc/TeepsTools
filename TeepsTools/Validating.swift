@@ -6,12 +6,12 @@
 //  Copyright © 2017 teeps. All rights reserved.
 //
 
-protocol Validating {
+public protocol Validating {
   var fieldType: RegexType? { get set }
   var customRegex: String? { get set }
 }
 
-extension Validating where Self: UITextField {
+public extension Validating where Self: UITextField {
   var validates: Bool {
     guard let text = self.text else { return true }
     if let customRegex = customRegex {
