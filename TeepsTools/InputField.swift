@@ -21,15 +21,15 @@
  
 
 public class InputField: UITextField, Validating {
-  var fieldType: RegexType?
-  var customRegex: String?
+  public var fieldType: RegexType?
+  public var customRegex: String?
   
-  convenience init(fieldType: RegexType) {
+  public convenience init(fieldType: RegexType) {
     self.init()
     self.fieldType = fieldType
   }
   
-  convenience init(customRegex: String) {
+  public convenience init(customRegex: String) {
     self.init()
     self.customRegex = customRegex
   }
