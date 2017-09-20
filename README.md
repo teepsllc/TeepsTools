@@ -31,27 +31,3 @@ i.e
 ```swift
 import TeepsTools
 ```
-
-If you need to import a single tool: `import TeepsTools.<TOOL>`
-i.e
-
-```swift
-import TeepsTools.Jumping
-```
-
-## Adding a new tool
-Adding a new tool is fairly simple.
-
-1. Add your new tool under the modules folder in Xcode.
-2. Create a header file, named the same as your module.
-3. Go to Build Phases > Headers and add your header to the Public section.
-4. Open `module.modulemap` and add your new module.
-
-```swift
-framework module TeepsTools {
-  // Add your new module here
-  module MyTool {
-    header "MyTool.h"
-  }
-}
-```
