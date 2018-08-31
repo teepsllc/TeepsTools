@@ -28,6 +28,9 @@ A protocol to register and load TableView and CollectionView cells.
 ### [UIViewExtensions](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/UIViewExtensions.swift)
 Some extensions for UIView to enable some things like onTap closures.
 
+[NSObjectExtensions](https://github.com/teepsllc/TeepsTools/blob/master/TeepsTools/NSObjectExtensions.swift)
+Some extensions for NSObject and NSObjectProtocol. Adds easier KVO and bindings.
+
 ## Carthage Installation
 To integrate TeepsTools into your Xcode project using Carthage, specify it in your `Cartfile`:
 
