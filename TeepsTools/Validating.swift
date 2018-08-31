@@ -6,6 +6,8 @@
 //  Copyright © 2017 teeps. All rights reserved.
 //
 
+import UIKit
+
 public protocol Validating {
   var fieldType: RegexType? { get set }
   var customRegex: String? { get set }

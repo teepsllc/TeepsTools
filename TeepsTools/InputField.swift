@@ -6,6 +6,8 @@
 //  Copyright © 2017 teeps. All rights reserved.
 //
 
+import UIKit
+
 /** USAGE:
  Storyboard: 
  Set custom class of a TextField to InputField.
@@ -18,7 +20,6 @@
  
  Validate input matches Regex by calling inputField.validates
 */
- 
 
 public class InputField: UITextField, Validating {
   public var fieldType: RegexType?
