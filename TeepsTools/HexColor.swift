@@ -8,12 +8,19 @@
 
 import UIKit
 
-/** USAGE:
- UIColor("#FFFFFF")
- UIColor("FFFFFF")
- UIColor("FFFFFF", alpha: 1)
- */
 public extension UIColor {
+  /**
+   Creates a color from a Hex value
+   
+   ```
+   UIColor("#FFFFFF")
+   UIColor("FFFFFF")
+   UIColor("FFFFFF", alpha: 1)
+   ```
+   
+   - Parameter hex: A hex string. The `#` is optional. `#FFFFFF` and `FFFFFF` will both return white.
+   - Parameter alpha: The alpha of the color. Defaults to 1
+   */
   public convenience init(_ hex: String, alpha: CGFloat = 1) {
     var sanitzedHex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
     

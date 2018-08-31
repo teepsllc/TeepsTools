@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6A36C41D1F702B4C009013E0 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36C41C1F702B4C009013E0 /* HexColor.swift */; };
+		6A92FE76213986F000AFC93A /* Registerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A92FE75213986F000AFC93A /* Registerable.swift */; };
+		6A92FE782139876F00AFC93A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A92FE772139876F00AFC93A /* NibLoadable.swift */; };
+		6A92FE7A213987D600AFC93A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A92FE79213987D600AFC93A /* UIViewExtensions.swift */; };
+		6A92FE7D2139AA0800AFC93A /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A92FE7C2139AA0800AFC93A /* NSObjectExtensions.swift */; };
 		B0ED5AC01F719AB800893BB3 /* Alerting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED5ABF1F719AB800893BB3 /* Alerting.swift */; };
 		B0ED5AFF1F71A66000893BB3 /* ImagePicking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */; };
 		B0ED5B051F71D0CA00893BB3 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ED5B041F71D0CA00893BB3 /* InputField.swift */; };
@@ -30,7 +34,10 @@
 
 /* Begin PBXFileReference section */
 		6A36C41C1F702B4C009013E0 /* HexColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
-		6A36C41F1F7030D0009013E0 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		6A92FE75213986F000AFC93A /* Registerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registerable.swift; sourceTree = "<group>"; };
+		6A92FE772139876F00AFC93A /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		6A92FE79213987D600AFC93A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		6A92FE7C2139AA0800AFC93A /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		B0ED5ABF1F719AB800893BB3 /* Alerting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerting.swift; sourceTree = "<group>"; };
 		B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicking.swift; sourceTree = "<group>"; };
 		B0ED5B041F71D0CA00893BB3 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
@@ -71,8 +78,20 @@
 				6A36C41C1F702B4C009013E0 /* HexColor.swift */,
 				B0ED5ABF1F719AB800893BB3 /* Alerting.swift */,
 				B0ED5AFE1F71A66000893BB3 /* ImagePicking.swift */,
+				6A92FE7B2139A9E800AFC93A /* Extensions */,
+				6A92FE772139876F00AFC93A /* NibLoadable.swift */,
+				6A92FE75213986F000AFC93A /* Registerable.swift */,
 			);
 			name = Modules;
+			sourceTree = "<group>";
+		};
+		6A92FE7B2139A9E800AFC93A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6A92FE79213987D600AFC93A /* UIViewExtensions.swift */,
+				6A92FE7C2139AA0800AFC93A /* NSObjectExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B0ED5B031F71D0B300893BB3 /* InputField */ = {
@@ -106,7 +125,6 @@
 		C9381C1C1F26610A00471C1A /* TeepsTools */ = {
 			isa = PBXGroup;
 			children = (
-				6A36C41F1F7030D0009013E0 /* module.modulemap */,
 				C9381C1E1F26610A00471C1A /* Info.plist */,
 				6A36C4261F70336D009013E0 /* Modules */,
 			);
@@ -178,18 +196,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = teeps;
 				TargetAttributes = {
 					C9381C191F26610A00471C1A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = H2YC2HQ6AS;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					C9381C221F26610A00471C1A = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = H2YC2HQ6AS;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -236,10 +255,14 @@
 			files = (
 				C9381C351F26612A00471C1A /* Jumping.swift in Sources */,
 				B0ED5AFF1F71A66000893BB3 /* ImagePicking.swift in Sources */,
+				6A92FE7D2139AA0800AFC93A /* NSObjectExtensions.swift in Sources */,
 				B0ED5B071F71D0DB00893BB3 /* Validating.swift in Sources */,
+				6A92FE782139876F00AFC93A /* NibLoadable.swift in Sources */,
 				6A36C41D1F702B4C009013E0 /* HexColor.swift in Sources */,
 				B0ED5B051F71D0CA00893BB3 /* InputField.swift in Sources */,
+				6A92FE7A213987D600AFC93A /* UIViewExtensions.swift in Sources */,
 				B0ED5B091F71D0F500893BB3 /* RegexType.swift in Sources */,
+				6A92FE76213986F000AFC93A /* Registerable.swift in Sources */,
 				B0ED5AC01F719AB800893BB3 /* Alerting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,15 +296,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -327,15 +358,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -378,12 +417,12 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TeepsTools/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = org.teeps.TeepsTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -401,11 +440,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = TeepsTools/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = org.teeps.TeepsTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -418,7 +457,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.teeps.TeepsToolsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -431,7 +471,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.teeps.TeepsToolsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

@@ -8,40 +8,60 @@
 
 import UIKit
 
-/** USAGE:
- ViewController must conform to UITextFieldDelegate and Jumping
+/**
+ Protocol to jump through TextFields.
+ 
+ ```
+ class ViewController: UITextFieldDelegate, Jumping {
+   @IBOutlet weak var textfield1: UITextField!
+   @IBOutlet weak var textfield2: UITextField!
+ 
+   var textFields: [UITextField] {
+     return [textfield1, textfield2]
+   }
+ 
+   override func viewDidLoad() {
+     super.viewDidLoad()
+     setTextFieldsDelegate()
+   }
+ }
+ ```
  */
-
 public protocol Jumping: class {
   /**
-   Outlets array defines the direction in which navigation will be handled
+   Array of TextFields. The indices define the direction in which navigation will be handled.
    */
-  var fields: [UITextField] { get }
+  var textFields: [UITextField] { get }
 }
 
 public extension Jumping where Self: UITextFieldDelegate, Self: UIViewController {
-  
   /**
-   Jump should be called within the textFieldShouldReturn delegate method
-   Parameter: textField being returned
+   jump should be called within the textFieldShouldReturn delegate method
    This will handle navigation to each field in the fields array and
    dismisal of keyboard on final textfield
+   
+   ```
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     jump(from: textField)
+     return true
+   }
+   ```
+   
+   - Parameter textField: The current textfield
    */
   public func jump(from textField: UITextField) {
-    if textField == fields.last {
+    if textField == textFields.last {
       textField.resignFirstResponder()
       return
     }
-    guard let idx = fields.index(of: textField) else { return }
-    fields[idx + 1].becomeFirstResponder()
+    guard let idx = textFields.index(of: textField) else { return }
+    textFields[idx + 1].becomeFirstResponder()
   }
   
   /**
    Sets the delegate for every text field to be navigated
    */
-  public func setDelegates() {
-    fields.forEach { textField in
-      textField.delegate = self
-    }
+  public func setTextFieldsDelegate() {
+    textFields.forEach { $0.delegate = self }
   }
 }
